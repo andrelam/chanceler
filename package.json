@@ -1,0 +1,44 @@
+{
+  "name": "chanceler",
+  "version": "0.0.1",
+  "description": "Controle de Presença de Loja Maçônica",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrelam/chanceler.git"
+  },
+  "keywords": [
+    "chanceler",
+    "chancelaria"
+  ],
+  "author": "Andre Luis Arantes Monteiro",
+  "license": "LGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/andrelam/chanceler/issues"
+  },
+  "homepage": "https://github.com/andrelam/chanceler#readme",
+  "dependencies": {
+    "async": "^1.4.0",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.13.1",
+    "compression": "^1.5.0",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.3.5",
+    "cookie-session": "^1.1.0",
+    "ejs": "^2.3.1",
+    "email-templates": "^2.0.1",
+    "express": "^4.12.4",
+    "express-session": "^1.11.3",
+    "mercadopago": "^0.3.2",
+    "method-override": "^2.3.3",
+    "mongoose": "^4.1.0",
+    "morgan": "^1.6.0",
+    "nodemailer": "^1.4.0",
+    "passport": "^0.2.2",
+    "passport-local": "^1.0.0",
+    "winston": "^1.0.0"
+  }
+}
