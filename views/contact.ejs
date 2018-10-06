@@ -1,0 +1,36 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<meta name="description" content="Fa&ccedil;a contato com Jos&eacute; Arnaldo de Castro, autor do livro Os Ciclos da Vida - A Cabal&aacute; e a Peregrina&ccedil;&atilde;o da Alma.">
+	<title>Os Ciclos da Vida | Contate o Autor</title>
+    <% include head.ejs %>
+</head>
+<body>
+    <% include headerUser.ejs %>
+	<div class="container">
+		<div class="col-sm-8 col-sm-offset-2">
+			<% if (message.length > 0) { %>
+				<div class="alert alert-success alert-dismissible fade-in" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Fechar"><span aria-hidden="true">&times;</span></button><%= message %></div>
+			<% } %>
+			<h1>Entre em contato com o autor</h1>
+			<p>Informe abaixo o motivo de seu contato, seja d&uacute;vida, sugest&atilde;o, cr&iacute;tica ou agradecimento. Seu nome, endere&ccedil;o eletr&ocirc;nico e data de nascimento ser&atilde;o enviados de forma segura para que possamos personalizar sua resposta de acordo com o seu mapa do Ciclo da Vida.</p>
+			<form action="/contato" method="post">
+				<input type="hidden" name="_csrf" value="<%= _csrf %>">
+				<div class="form-group">
+					<label>Mensagem</label>
+					<textarea class="form-control" name="message" required placeholder="Informe sua mensagem aqui" rows="7"></textarea>
+				</div>
+				<div class="form-group">
+					<button type="submit" class="btn btn-warning btn-lg">Enviar</button>
+					<a class="btn btn-warning btn-lg" href="/mapa" role="button">Voltar</a>
+				</div>
+			</form>
+		</div>
+
+	</div>
+
+	<% include footer.ejs %>
+
+</body>
+</html>

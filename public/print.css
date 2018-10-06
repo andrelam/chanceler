@@ -1,0 +1,5 @@
+body {visibility:hidden;}
+.print {visibility:visible;}
+abbr[title]:after {content: "";}
+.print-only, .print-only > * {display: block !important;}
+.noprint {visibility:hidden;}

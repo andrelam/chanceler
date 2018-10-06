@@ -1,0 +1,99 @@
+﻿<!-- views/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<meta name="description" content="Os Ciclos da Vida - A Cabal&aacute; e a Peregrina&ccedil;&atilde;o da Alma - &eacute; o novo livro de Jos&eacute; Arnaldo de Castro, e aqui voc&ecirc; pode criar o seu mapa pessoal de seu Ciclo da Vida.">
+	<title>Os Ciclos da Vida</title>
+    <% include head.ejs %>
+	<style type="text/css">
+		img.ciclos { width: 100%; }
+	</style>
+</head>
+<body>
+	<script type='application/ld+json'>
+	{
+		"@context": "http://schema.org/",
+		"@type": "Book",
+		"bookFormat": {
+			"@type": "BookFormatType",
+			"name": "http://schema.org/Paperback"
+		},
+		"isbn": "9788536656472",
+		"numberOfPages": "320",
+		"author": {
+			"@type":"Person",
+			"name":"José Arnaldo de Castro"
+		},
+		"name": "Os Ciclos da Vida",
+		"image": "https://s3.amazonaws.com/www.coldfire.com.br/images/capa.jpg",
+		"inLanguage": {
+			"@type": "Language",
+			"name": "pt_BR"
+		},
+		"url": "http://www.asabeca.com.br/detalhes.php?prod=8552",
+		"sameAs": "http://www.scortecci.com.br/catalogo/detalhes.php?id=5816",
+		"workExample" : [{
+			"@type": "Book",
+			"isbn": "9788536656472",
+			"bookEdition": "1a. Edição",
+			"bookFormat": "http://schema.org/Paperback",
+			"potentialAction":{
+				"@type":"ReadAction",
+				"target":
+				{
+					"@type":"EntryPoint",
+					"urlTemplate":"http://www.asabeca.com.br/detalhes.php?prod=8552",
+					"actionPlatform":[
+						"http://schema.org/DesktopWebPlatform",
+						"http://schema.org/IOSPlatform",
+						"http://schema.org/AndroidPlatform",
+						"http://schema.org/MobileWebPlatform"
+					]
+				},
+				"expectsAcceptanceOf":{
+					"@type":"Offer",
+					"Price":70.00,
+					"priceCurrency":"BRL",
+					"eligibleRegion" : {
+						"@type":"Country",
+						"name":"BR"
+					},
+					"availability": "http://schema.org/InStock"
+				}
+			}
+		}]
+	}
+	</script>
+    <% include header.ejs %>
+	<% if (message.length > 0) { %>
+		<div class="alert alert-success alert-dismissible fade-in" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Fechar"><span aria-hidden="true">&times;</span></button><%= message %></div>
+	<% } %>
+	<img class="img-fluid rounded ciclos" src="https://s3.amazonaws.com/www.coldfire.com.br/images/ciclo.jpg" alt=""/>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<br />
+				<p class="text-center">Aqui voc&ecirc; pode gerar o seu mapa anual completo, baseado no conte&uacute;do e explica&ccedil;&otilde;es do livro <i><a href="http://www.scortecci.com.br/catalogo/detalhes.php?id=5816">Os Ciclos da Vida - A Cabal&aacute; e a Peregrina&ccedil;&atilde;o da Alma</a></i>, de Jos&eacute; Arnaldo de Castro.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<h2><a href="http://www.asabeca.com.br/detalhes.php?prod=8552">Compre o livro!</a></h2>
+				<p class="text-justify">Se voc&ecirc; deseja obter o livro para entender como o seu mapa pode ser interpretado, clique <a href="http://www.asabeca.com.br/detalhes.php?prod=8552">aqui</a>. &Eacute; importante ressaltar que sem a leitura do livro, &eacute; virtualmente imposs&iacute;vel o entendimento do seu Mapa.</p>
+			</div>
+			<div class="col-md-4">
+				<h2>Fa&ccedil;a seu cadastro</h2>
+				<p class="text-justify">Se esta &eacute; a sua primeira vez aqui, fa&ccedil;a seu cadastro e tenha acesso ao seu mapa dos Ciclos da Vida personalizado.</p>
+				<p><a class="btn btn-default" href="/registro" role="button">Cadastre-se j&aacute;!</a></p>
+			</div>
+			<div class="col-md-4">
+				<h2>Acesse seu mapa</h2>
+				<p class="text-justify">Se voc&ecirc; j&aacute; completou seu cadastro, acesse seu mapa personalizado informando seus dados abaixo.</p>
+				<p><a class="btn btn-default" href="/acessar" role="button">Acesse</a></p>
+			</div>
+		</div>
+	</div>
+	<% include footer.ejs %>
+</body>
+</html>
